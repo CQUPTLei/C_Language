@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">window.staticDomain = "https://static.nowcoder.com/";
+            window.staticBackDomain = "https://static-bk.nowcoder.com/";</script>
+    <script type="text/javascript" _nc_injected_>var errorReportQueue = [];
+            var staticDomain = window.staticDomain || 'static.nowcoder.com';
+            var staticBackDomain = window.staticBackDomain || 'static-bk.nowcoder.com';
+            var oldPush = errorReportQueue.push;
+            errorReportQueue.push = function(item) {
+                oldPush.call(errorReportQueue, item)
+            }
+            ;
+            function assetLoadFailedHandler(e) {
+                var target = e.target || e;
+                var name = target.nodeName;
+                var url = target.src || target.href;
+                if (url.indexOf(staticBackDomain) > -1)
+                    return;
+                var newUrl = url.replace(staticDomain, staticBackDomain);
+                if (name === 'SCRIPT') {
+                    document.write("<script fallback='true' src='" + newUrl + "' crossorigin='anonymous'><" + '/script>')
+                } else {
+                    if (name === 'LINK') {
+                        target.href = newUrl
+                    } else if (name === 'IMG') {
+                        target.src = newUrl
+                    }
+                }
+                errorReportQueue.push({
+                    nodeName: name,
+                    url: url
+                })
+            }
+            ;document.addEventListener('error', function(event) {
+                var target = event.target;
+                if (target instanceof HTMLImageElement) {
+                    target.setAttribute('data-error-src', target.src);
+                    if (target.src.indexOf(staticDomain) > -1) {
+                        target.src = target.src.replace(staticDomain, staticBackDomain)
+                    }
+                    if (target.src.indexOf('uploadfiles.nowcoder.com') > -1) {
+                        target.src = target.src.replace('uploadfiles.nowcoder.com', 'uploadfiles-bk.nowcoder.com')
+                    }
+                }
+            }, true);
+            var oldFetch = window.fetch;
+            if (oldFetch) {
+                window.fetch = function() {
+                    var args = [].slice.call(arguments);
+                    var url = args[0];
+                    var reg = new RegExp(staticDomain,'g');
+                    if (reg.test(url)) {
+                        function retryFetch() {
+                            args[0] = args[0].replace(staticDomain, staticBackDomain);
+                            return oldFetch.apply(this, args)
+                        }
+                        return oldFetch.apply(this, args).then(res=>{
+                            if (res.status === 200) {
+                                return Promise.resolve(res)
+                            } else {
+                                return retryFetch()
+                            }
+                        }
+                        ).catch(retryFetch)
+                    }
+                    return oldFetch.apply(this, args)
+                }
+            }</script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="google-site-verification" content="lFSmn0rlLR-OPkas5c2GxdhTKP4J4PyaahhQ2TNanjs" />
+    <meta itemprop="image" content="https://static.nowcoder.com/images/logo_87_87.png" />
+    <meta name="description" content="牛客是互联网求职神器，C++、Java、前端、产品、运营技能学习/备考/求职题库，在线进行百度阿里腾讯网易等互联网名企笔试面试模拟考试练习,和牛人一起讨论经典试题,全面提升你的技术能力">
+    <meta name="keywords" content="牛客,C++笔试面试，Java笔试面试，计算机笔试,计算机面试, IT笔试,笔试题库,笔试练习,IT面试,在线编程,编程学习,牛客">
+    <title>OD统一考试（A卷2022Q4）_牛客</title>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link onerror="assetLoadFailedHandler(event)" rel="stylesheet" crossorigin="anonymous" href="https://static.nowcoder.com/ent/nowcoder/2.4.795/stylesheets/v2lib/fontcustom/global/global.css">
+    <link onerror="assetLoadFailedHandler(event)" rel="stylesheet" crossorigin="anonymous" href="https://static.nowcoder.com/ent/nowcoder/2.4.795/stylesheets/v2lib/global/global.ui.css">
+    <link onerror="assetLoadFailedHandler(event)" rel="stylesheet" crossorigin="anonymous" href="https://static.nowcoder.com/ent/nowcoder/2.4.795/stylesheets/v2lib/base.css">
+    <link onerror="assetLoadFailedHandler(event)" rel="stylesheet" crossorigin="anonymous" href="https://static.nowcoder.com/ent/nowcoder/2.4.795/stylesheets/v2lib/channel/default.css">
+    <link onerror="assetLoadFailedHandler(event)" rel="stylesheet" crossorigin="anonymous" href="https://static.nowcoder.com/ent/nowcoder/2.4.795/stylesheets/element-ui.css">
+    <link onerror="assetLoadFailedHandler(event)" rel="stylesheet" crossorigin="anonymous" href="https://static.nowcoder.com/ent/nowcoder/2.4.795/stylesheets/pages/writtenTest/answer-paper.css">
+    <link onerror="assetLoadFailedHandler(event)" rel="stylesheet" crossorigin="anonymous" href="https://static.nowcoder.com/ent/nowcoder/2.4.795/javascripts-wp/lib/common.css">
+    <link onerror="assetLoadFailedHandler(event)" rel="stylesheet" crossorigin="anonymous" href="https://static.nowcoder.com/ent/nowcoder/2.4.795/javascripts-wp/lib/env.css">
+    <!-- 加载完成考中代码前进行 loading 占位 -->
+    <link onerror="assetLoadFailedHandler(event)" rel="stylesheet" crossorigin="anonymous" href="https://static.nowcoder.com/ent/nowcoder/2.4.795/javascripts-wp/page/cts/placeholderLoadingV3/main.entry.css">
+    <link onerror="assetLoadFailedHandler(event)" rel="stylesheet" crossorigin="anonymous" href="https://static.nowcoder.com/ent/nowcoder/2.4.795/javascripts-wp/page/cts/testV3/main.entry.css">
+</head>
+<body tabindex="1" style="background-color: #F6F8FB; margin: 0; min-height: 100%">
+    <div class="nk-container">
+        <div id="jsApp">
+            <div class="header" style="position:fixed;top:0;left:0;right:0; height: 64px; width: 100%; padding: 12px 40px; display: flex; align-items: center; box-sizing: border-box;background-color: #fff">
+                <img src="https://uploadfiles.nowcoder.com/images/20200519/3985294_1589857478214_480235A5A3C7969AD67F7C8CB58F4DF4" style="height: 40px; width: 40px; border-radius: 6px; border: 1px solid #F5F6F6; margin-right: 12px" />
+                <span>OD统一考试（A卷2022Q4）</span>
+            </div>
+            <!-- 挂载点 -->
+            <div class="nk-placeholder-loading"></div>
+        </div>
+        <script>window.isLogin = false;
+                window.globalInfo = {
+                    canLoadInIframe: 'false'
+                };
+                window.useNeteaseCaptcha = false;
+                window.showCodeCompleteV2 = false;</script>
+        <script type="text/javascript">window.ncDeployImageRoot = "https://static.nowcoder.com/ent";
+                window.ncDeployJSRoot = "https://static.nowcoder.com/ent/nowcoder/2.4.795/javascripts-wp";
+                window.ncJsInDev = false;
+                window.ncJsInPre = false;
+                window.ncJsVersion = "1.03.20";
+                window.ncJsPluginVersion = "1.0.17";
+                window.ncIsInNowcoderMainSite = true;
+                window.ncJsIsOversea = 0;
+                window.ncJsEdition = 0;</script>
+        <script type="text/javascript">(function() {
+                    var oBody = document.body;
+                    var sOverflow = oBody.style.overflow;
+                    var sUa = (window.navigator || {}).userAgent || '';
+                    var m = sUa.match(/MSIE ([^;]*)|Trident.*; rv(?:\s|:)?([0-9.]+)/) || [];
+                    var nVersion = +m[1] || +m[2] || 0;
+                    nVersion && nVersion <= 8 && _fShowMask();
+
+                    function _fShowMask() {
+                        oBody.style.overflow = 'hidden';
+                        var nWidth = window.document.documentElement.clientWidth;
+                        var nHeight = window.document.documentElement.clientHeight;
+                        var nTop = ('pageYOffset'in window ? window.pageYOffset : document.documentElement.scrollTop) || 0;
+                        var sHtml = ['<div style="position:absolute;left:0;top:' + nTop + 'px;z-index:99999;width:' + nWidth + 'px;height:' + nHeight + 'px;">', '<div style="position:absolute;left:0;top:0;width:100%;height:100%;background:#000;opacity:0.5;filter:alpha(opacity=50);"></div>', '<div class="pop-box" style="width:800px;z-index:100000;left:' + (nWidth - 800) / 2 + 'px;top:' + Math.max(0, (nHeight - 624) / 2) + nTop + 'px;">', '<div class="pop-title"><h1>浏览器版本过低提示</h1><a href="javascript:void(0);" onclick="closeIE8GlobalMask()" class="pop-close" title="关闭"></a></div>', '<div class="pop-content clearfix">', '<div class="pop-subject-tips-wrapper">', '<a href="javascript:void(0);"><img src="//static.nowcoder.com/fe/style/images/common/res/tips/13.png"></a>', '<div class="pop-exit-main">你使用的浏览器版本过低，无法正常访问牛客<br />请使用牛客APP或更换浏览器。</div>', '<div class="pop-download-browser">', '<ul class="pop-browser-list">', '<li><p>下载牛客APP</p><div class="pic"><img src="https://uploadfiles.nowcoder.com/app/app_download.png"></div></li>', '<li><a href="https://static.nowcoder.com/b/i/googlechrome74_32.exe" target="_blank"><p>下载Chrome浏览器</p><div class="pic"><img src="//static.nowcoder.com/images/res/browser/chrome.png"></div></a></li>', '<li><a href="https://www.firefox.com.cn/download/#more" target="_blank"><p>下载Firefox浏览器</p><div class="pic"><img src="//static.nowcoder.com/images/res/browser/firefox.png"></div></a></li>', '</ul>', '<a href="javascript:void(0);" onclick="closeIE8GlobalMask()" class="link-green">我知道访问会出错，但是我还要继续用这个浏览器浏览 &gt;&gt;</a>', '</div>', '</div>', '</div>', '</div>', '</div>'].join('');
+                        var oDv = document.createElement('div');
+                        oDv.innerHTML = sHtml;
+                        oBody.appendChild(oDv);
+                        window.closeIE8GlobalMask = function() {
+                            oBody.removeChild(oDv);
+                            oBody.style.overflow = sOverflow;
+                            _fShowBar();
+                        }
+                        ;
+                    }
+
+                    function _fShowBar() {
+                        var oDv = document.createElement('div');
+                        oDv.innerHTML = '<div class="tip-block-box" onclick="closeIE8GlobalBar()" style="position:fixed;left:0;top:54px;width:100%;z-index:99999;"><div class="tip-block">你使用的浏览器版本过低，无法正常访问牛客，请使用牛客APP或更换浏览器，<a href="javascript:void(0);">点击查看详情</a>。</div></div>';
+                        oBody.appendChild(oDv);
+                        window.closeIE8GlobalBar = function() {
+                            oBody.removeChild(oDv);
+                            _fShowMask();
+                        }
+                        ;
+                    }
+                }
+                )();</script>
+        <script onerror="assetLoadFailedHandler(event)" src="https://static.nowcoder.com/ent/nowcoder/2.4.795/javascripts-wp/lib/vendor.dll.js" type="text/javascript"></script>
+        <script type="text/javascript">(function() {
+                    if (window.seajs || window.vendor_library)
+                        return;
+                    var sHref = window.location.href || '';
+                    var sQuery = (sHref.split('#')[0] || '').split('?')[1] || '';
+                    var aItem = sQuery.split('&');
+                    for (var i = aItem.length; i >= 0; i--) {
+                        !aItem[i] && aItem.splice(i, 1);
+                    }
+                    var bTx = aItem.length > 0;
+                    if (bTx) {
+                        for (var i = 0, l = aItem.length; i < l; i++) {
+                            bTx = aItem[i] === 'cdn=tencent';
+                            if (bTx)
+                                break;
+                        }
+                    }
+                    if (bTx)
+                        return _fRenderNone();
+                    var sHash = sHref.split('#')[1] || '';
+                    aItem.push('cdn=tencent');
+                    window.location.href = (sHref.split('#')[0] || '').split('?')[0] + '?' + aItem.join('&') + (sHash ? '#' + sHash : '');
+
+                    function _fRenderNone() {
+                        var oBody = document.body;
+                        var aChild = oBody.childNodes;
+                        var oDv = document.createElement('div');
+                        oDv.innerHTML = ['<div style="text-align:center;">', '<div style="font-size:18px;margin:20px 0;font-weight: bold;">', '因你使用的网络运营商限制，导致静态文件加载出错，如果想要彻底解决问题，请联系你使用的网络运营商（如运营商不处理可以前往工信部投诉），也可以按照以下步骤修改电脑的DNS', '<br />推荐使用以下DNS: 223.5.5.5(首选) 和 119.29.29.29(备用)', '</div>', '<img style="border:1px solid #ccc;" src="https://qqstatic.nowcoder.com/files/cdn.jpg" />', '</div>'].join('');
+                        aChild.length === 0 && oBody.appendChild(oDv);
+                        aChild.length > 0 && oBody.insertBefore(oDv, aChild[0]);
+                    }
+                }
+                )();</script>
+        <script onerror="assetLoadFailedHandler(event)" src="https://static.nowcoder.com/ent/nowcoder/2.4.795/javascripts-wp/lib/runtime.js" type="text/javascript"></script>
+        <script onerror="assetLoadFailedHandler(event)" src="https://static.nowcoder.com/ent/nowcoder/2.4.795/javascripts-wp/lib/common.js" type="text/javascript"></script>
+        <script onerror="assetLoadFailedHandler(event)" src="https://static.nowcoder.com/ent/nowcoder/2.4.795/javascripts-wp/lib/env.js" type="text/javascript"></script>
+        <script type="text/javascript">var _dmt = ("https://static.nowcoder.com/" || '').match(/(http|https):\/\/(.*)/);
+                _dmt = _dmt ? _dmt[2] : 'static.nowcoder.com/';
+
+                (function() {
+                    !function(e, t, n, g, i) {
+                        e[i] = e[i] || function() {
+                            (e[i].q = e[i].q || []).push(arguments)
+                        }
+                        ,
+                        n = t.createElement("script"),
+                        tag = t.getElementsByTagName("script")[0],
+                        n.async = 1,
+                        n.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + g,
+                        tag.parentNode.insertBefore(n, tag)
+                    }(window, document, "script", _dmt + "lib/oig.2.1.js", "gio");
+                    gio('init', 'c196c3667d214851b11233f5c17f99d5', {});
+                    gio('config', {
+                        host: 'grow.nowcoder.com'
+                    });
+                    gio('send');
+                }
+                )();</script>
+        <script crossorigin="anonymous" onerror="assetLoadFailedHandler(event)" type="text/javascript" src="https://static.nowcoder.com/lib/aliyun-oss-sdk-6.17.1.min.js"></script>
+        <script crossorigin="anonymous" onerror="assetLoadFailedHandler(event)" type="text/javascript" src="https://static.nowcoder.com/lib/codemirror/release/1.1.0/index.js"></script>
+        <script type="text/javascript">window.isTencentCloud = false;
+                window.clarityFlag = 1;
+                window.pageInfo = {
+                    originUserId: '14521468',
+                    newJudge: false,
+                    userId: 'FCFF6B4472EB94895D2B1AAD67C4DCC3',
+                    hrId: '329000',
+                    user: {
+
+                        ext: {
+                            "phone": "13060226967",
+                            "name": "雷大虎",
+                            "email": "1413454867@qq.com",
+                            "key": "13060226967雷大虎"
+                        },
+
+                        id: 'FCFF6B4472EB94895D2B1AAD67C4DCC3',
+                        key: '13060226967雷大虎',
+                        name: '雷大虎'
+                    },
+                    paperId: '17233685',
+                    examTime: '长期有效',
+                    paperName: 'OD统一考试（A卷2022Q4）',
+                    durationMin: '150',
+                    paperLogo: 'https://uploadfiles.nowcoder.com/images/20200519/3985294_1589857478214_480235A5A3C7969AD67F7C8CB58F4DF4',
+                    paperCategoryCount: {
+                        100: 3
+                    },
+                    categorySummary: {
+                        "100": {
+                            "categoryType": 100,
+                            "num": 3,
+                            "questionType": 4,
+                            "totalScore": 400.0
+                        }
+                    },
+                    totalScore: '400',
+                    paperSetting: {
+                        "antiDesignJumpOut": false,
+                        "relationType": 2,
+                        "chooseScoreRule": 3,
+                        "antiJumpOut": false,
+                        "simulation": false,
+                        "setSourceCoderCheat": true,
+                        "hide_return_button": false,
+                        "questionNewCounts": "4:1:100:2,4:2:100:1",
+                        "faq": [],
+                        "needCameraToAnswer": false,
+                        "logo": "https://uploadfiles.nowcoder.com/images/20200519/3985294_1589857478214_480235A5A3C7969AD67F7C8CB58F4DF4",
+                        "answerValidity": 0,
+                        "needScreenVideoSd": false,
+                        "question_disorder": false,
+                        "allow_new": false,
+                        "examLateDuration": 0,
+                        "codeSimilarRate": 0,
+                        "languageLimit": false,
+                        "lateNoticeSetting": {
+                            "noticeTime": 20,
+                            "noticeSummary": "请注意合理安排考试时间，抓紧时间作答。"
+                        },
+                        "checkCheat": true,
+                        "randomQuestion": true,
+                        "videoAnswerQuestionRule": "[{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2683869},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2683370},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2683346},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2683097},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2682747},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2682658},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2682029},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2681833},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2680901},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2680335},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2680064},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2679891},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2676955},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2676912},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2675655},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2674410},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2674351},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2673101},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2672919},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2671078},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2669468},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2668937},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2668580},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2667950},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2667797},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2667753},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2666714},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2664998},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2660931},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2660876},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2660467},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2659732},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2658564},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2649751},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2649561},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2639217},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2638703},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2638136},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2636085},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2635423},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2633411},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2632052},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2631227},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2631167},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2630991},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2630126},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2629613},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2629441},{\"answerCountLimit\":0,\"answerTimeLimitSecond\":0,\"questionId\":2627563}]",
+                        "allow_message": true,
+                        "antiCodingJumpOut": false,
+                        "testReportSetting": {
+                            "historyTestRecord": 1
+                        },
+                        "allow_screen_record": true,
+                        "needFaceCheck": false,
+                        "needPhoneCameraVideo": false,
+                        "version": "1.0",
+                        "uploadFileTimeRange": 0,
+                        "antiAudioJumpOut": false,
+                        "questionTagNames": {
+                            "1": "###1###",
+                            "2": "###2###"
+                        },
+                        "paper_end_summary": "本场考试已结束，请保持您的手机、邮箱畅通，方便接收后续通知。",
+                        "paperSummary": "【注意】：参加考试有效期为：7天，请考生在收到邮件通知7天内完成考试！如有特殊情况，候选人应报备，否则成绩无效！\n1. 请使用最新版Chrome浏览器作答（不低于82版），如考试需开启摄像头，请确保电脑带有摄像头。\n2. 一旦开始考试，请勿离开答题页面，除非当前目录明确提醒可以离开，前三次离开会有提醒，之后将不再提醒。各目录是否支持离开答题页面则取决于试卷具体设置，进入每个目录会有提示。\n3. 考试过程中允许使用草稿纸，请提前准备纸笔。允许上厕所等短暂离开，请控制离开时间。\n4. 考试期间如遇到断电、断网、死机等问题，关闭浏览器重新打开试卷链接即可继续做题。\n5. 遇到问题请即时反馈给考试主办方。\n6.为了确保公平公正，请独立完成考试，考后不泄漏题目信息。",
+                        "hideNowcoder": false,
+                        "videoInvigilation": false,
+                        "codePlayback": true,
+                        "noQueueUp": false,
+                        "timeLimitType": 0,
+                        "randomFrequentType": 0,
+                        "allowMobileTest": false,
+                        "needScreenVideo": false,
+                        "questionCategoryRule": "{\"100\":{\"type\":0,\"dimension\":[1]}}",
+                        "allow_camera": true,
+                        "needVideoRecord": false,
+                        "languageList": [],
+                        "codingScoreRule": 2,
+                        "monitorPhone": true,
+                        "needCameraVideo": false,
+                        "not_need_judge_type": "3_5_4_7_12_13_50",
+                        "customCategory": true,
+                        "reportPlatform": true,
+                        "questionCategories": {
+                            "100": "编程题目"
+                        },
+                        "need_judge_type": "",
+                        "signUpFields": [{
+                            "need": true,
+                            "edit": 0,
+                            "valueType": 0,
+                            "name": "name",
+                            "format": "",
+                            "title": "姓名"
+                        }, {
+                            "need": true,
+                            "edit": 0,
+                            "valueType": 0,
+                            "name": "key",
+                            "format": "",
+                            "title": "投递编号"
+                        }, {
+                            "need": false,
+                            "edit": 0,
+                            "valueType": 0,
+                            "name": "phone",
+                            "format": "Phone",
+                            "title": "手机号码"
+                        }, {
+                            "need": false,
+                            "edit": 0,
+                            "valueType": 0,
+                            "name": "email",
+                            "format": "Email",
+                            "title": "邮箱"
+                        }],
+                        "needScreenVideoHd": false,
+                        "codeSimilarRates": {
+                            "2658564": 95
+                        },
+                        "antiPaintJumpOut": false,
+                        "questionIdsTypes": {
+                            "1": [2641543, 2667657, 2649749, 2631063, 2632112, 2679995, 2678186, 2668581, 2684399, 2682055, 2691770, 2642128, 2642844, 2651676, 2631077, 2654099, 2694368, 2631274, 2659269, 2631037, 2679341, 2653844, 2653967, 2683398, 2629562, 2667520, 2681850, 2702600, 2673631, 2679853, 2632016, 2681467, 2660805, 2656428, 2683803, 2666506, 2666941, 2670558, 2691794, 2692447, 2643318, 2640326, 2667508, 2632183, 2631255, 2684789, 2638528, 2688947, 2684023, 2682322],
+                            "2": [2671078, 2635423, 2638136, 2682658, 2629613, 2683869, 2631227, 2668580, 2672919, 2660467, 2683346, 2636085, 2668937, 2676912, 2676955, 2674410, 2682029, 2633411, 2660931, 2682747, 2638703, 2666714, 2629441, 2649751, 2669468, 2667753, 2667797, 2632052, 2675655, 2659732, 2658564, 2680335, 2630991, 2631167, 2649561, 2679891, 2667950, 2683097, 2683370, 2639217, 2673101, 2674351, 2681833, 2660876, 2630126, 2680901, 2664998, 2680064, 2627563]
+                        },
+                        "questionScores": "100.0,100.0,200.0",
+                        "forbidPreview": true,
+                        "allowCalculator": false,
+                        "needFaceChangeCheck": false,
+                        "screenVideoQuality": 0,
+                        "allowCopy": false,
+                        "needMobileCamera": false,
+                        "option_disorder": false
+                    },
+                    status: 2,
+                    mDomain: 'https://e.nowcoder.com',
+                    monitorPhone: 'true',
+                    timestampServer: '1682669550815',
+                    isVipUser: false,
+                    vipMessageData: '',
+                    chromeMiniVersion: 72,
+                    firefoxMiniVersion: 69,
+                    firstTimeAttendNowcoderTest: true,
+                    firstTimeAttendNowcoderTest: true,
+                    hideNk: false
+                };</script>
+        <!-- 加载完成考中代码前进行 loading 占位 -->
+        <script crossorigin="anonymous" onerror="assetLoadFailedHandler(event)" type="text/javascript" src="https://static.nowcoder.com/ent/nowcoder/2.4.795/javascripts-wp/page/cts/placeholderLoadingV3/main.entry.js"></script>
+        <script crossorigin="anonymous" onerror="assetLoadFailedHandler(event)" type="text/javascript" src="https://static.nowcoder.com/lib/AgoraRTCSDK-4.10.2.js"></script>
+        <script crossorigin="anonymous" onerror="assetLoadFailedHandler(event)" type="text/javascript" src="https://static.nowcoder.com/lib/trtc-4.14.3.js"></script>
+        <script crossorigin="anonymous" onerror="assetLoadFailedHandler(event)" type="text/javascript" src="https://static.nowcoder.com/ent/nowcoder/2.4.795/javascripts-wp/page/cts/testV3/main.entry.js"></script>
+</body>
+</html>

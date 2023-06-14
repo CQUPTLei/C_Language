@@ -1,0 +1,11 @@
+﻿  main_test.c
+D:\C_learn\C_Primer\C_File\main_test.c(31,12): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\C_learn\C_Primer\C_File\main_test.c(38,2): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\C_learn\C_Primer\C_File\main_test.c(40,2): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\C_learn\C_Primer\C_File\main_test.c(42,13): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\C_learn\C_Primer\C_File\main_test.c(90,26): warning C4047: “!=”:“int”与“void *”的间接级别不同
+D:\C_learn\C_Primer\C_File\main_test.c(71,12): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\C_learn\C_Primer\C_File\main_test.c(78,10): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\C_learn\C_Primer\C_File\main_test.c(87,10): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\C_learn\C_Primer\C_File\main_test.c(101,7): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C_File.vcxproj -> D:\C_learn\C_Primer\C_File\x64\Debug\C_File.exe

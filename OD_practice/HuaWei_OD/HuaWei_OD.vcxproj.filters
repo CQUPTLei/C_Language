@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="去除重复字符.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="02最短木板长度.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="03找出重复代码.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="04单入口空闲区域.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="01猜字谜.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="05单词倒序.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="06打印文件.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="07对称美学.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="08分界线.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="09端口合并.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="10货币单位换算.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="11获得完美走位.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="13日志采集系统.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="14数组的中心位置.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="15通信误码.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="16网上商城优惠活动(一).c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="17开心消消乐.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="源.md">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="hh.html">
+      <Filter>源文件</Filter>
+    </None>
+  </ItemGroup>
+</Project>

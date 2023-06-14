@@ -1,0 +1,19 @@
+﻿  cacaulate.c
+D:\C_learn\C_Primer\C_Primer\cacaulate.c(34,39): warning C4133: “!=”: 从“int *”到“char *”的类型不兼容
+  dist_test.c
+  String_func.c
+D:\C_learn\C_Primer\C_Primer\String_func.c(69,2): error C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\C_learn\C_Primer\C_Primer\String_func.c(80,2): error C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\C_learn\C_Primer\C_Primer\String_func.c(112,3): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\C_learn\C_Primer\C_Primer\String_func.c(118,16): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\C_learn\C_Primer\C_Primer\String_func.c(127,2): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\C_learn\C_Primer\C_Primer\String_func.c(142,19): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+D:\C_learn\C_Primer\C_Primer\String_func.c(153,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 2 拥有了类型“char *”
+D:\C_learn\C_Primer\C_Primer\String_func.c(153,9): warning C4313: "printf": 格式字符串中的 "%d" 与类型为 "char *" 的参数 2 冲突
+D:\C_learn\C_Primer\C_Primer\String_func.c(157,39): warning C4047: “函数”:“char **”与“char *”的间接级别不同
+D:\C_learn\C_Primer\C_Primer\String_func.c(157,37): warning C4024: “strtol”: 形参和实参 2 的类型不同
+D:\C_learn\C_Primer\C_Primer\String_func.c(158,42): warning C4047: “函数”:“char **”与“char *”的间接级别不同
+D:\C_learn\C_Primer\C_Primer\String_func.c(158,39): warning C4024: “strtol”: 形参和实参 2 的类型不同
+  String_s.c
+  正在生成代码...
+D:\C_learn\C_Primer\C_Primer\cacaulate.c(35): warning C4716: “hh”: 必须返回一个值

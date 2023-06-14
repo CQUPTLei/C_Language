@@ -1,0 +1,3 @@
+﻿  client_tcp.c
+D:\C_learn\socket\client_tcp\client_tcp.c(34,34): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+  client_tcp.vcxproj -> D:\C_learn\socket\client_tcp\x64\Debug\client_tcp.exe

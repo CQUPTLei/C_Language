@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="01预定酒店.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="02整理扑克牌.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="03单入口空闲区域.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="04日志采集系统.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="05异常打卡记录.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="06简单的自动曝光.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="07数组中心位置.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="08找数字.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="09新员工座位安排系统.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="10相同数字的积木游戏1.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="11找出通过车辆最多颜色.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="12AI处理器嘴和.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="16通信误码.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="13光伏场地建设规划.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="14字符串重新排序.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="17最大软件版本号.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="18查找重复代码.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hello源.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="regggg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="regex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,8 @@
+D:\C_learn\SQLLink\bin\Debug\SQLLink.dacpac
+D:\C_learn\SQLLink\obj\Debug\SQLLink.sqlproj.AssemblyReference.cache
+D:\C_learn\SQLLink\obj\Debug\Model.xml
+D:\C_learn\SQLLink\obj\Debug\refactor.xml
+D:\C_learn\SQLLink\obj\Debug\postdeploy.sql
+D:\C_learn\SQLLink\obj\Debug\predeploy.sql
+D:\C_learn\SQLLink\obj\Debug\SQLLink.dll
+D:\C_learn\SQLLink\obj\Debug\SQLLink.pdb
