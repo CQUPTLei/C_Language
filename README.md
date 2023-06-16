@@ -11,7 +11,6 @@
 - C_Linux：Visual Studio中新建的Linux项目；
 - C_Primer：《C Primer Plus 第六版》少许代码
 - ebooks：相关电子书
-- OD_***：od代码
 - socket：windows下socket代码，包括udp和tcp
 - SQLLink：在Visual Studio中链接SQL Server
 - Test：临时测试某些代码的文件
