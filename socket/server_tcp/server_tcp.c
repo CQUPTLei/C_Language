@@ -2,7 +2,7 @@
 #include <winsock2.h>
 #pragma comment(lib, "ws2_32.lib") 
 
-#define ip "192.168.31.39"
+#define ip "192.168.0.5"
 #define PORT 8080
 #define BUF_SIZE 1024
 
