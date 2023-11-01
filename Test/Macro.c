@@ -1,20 +1,13 @@
 #include <stdio.h>
 
-fmax(int b[], int t)
+int main()
 {
-    int i, imax;
-    imax = b[0];
-    for (i = 1; i < t; i++)
-        if (b[i] > imax) imax = b[i];
-    return (imax);
-}
-
-
-main()
-{
-    int a[10], i, jmax;
-    for (i = 0; i < 10; ++i)
-        scanf("%d" , &a[i]);
-    jmax = fmax(a, 10);
-    printf("%d" , jmax);
+	double a, b, c;
+	printf("Type in two numbers:\n");
+	scanf("%f %f", &a, &b);
+	printf("%f %f\n", a, b);
+	c = a / b;
+	printf("%.1f\n", c);
+	printf("%.1f is %.2f  of %.1f", a, c, b);
+	return 0;
 }
